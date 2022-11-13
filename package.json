@@ -3,9 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "html"
+    ]
+  },
   "scripts": {
     "test": "tsc && jest ./dist --runInBand --coverage",
-	  "main": "tsc && node ./dist/src/main"
+    "main": "tsc && node ./dist/src/main"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +26,7 @@
     "express": "^4.17.3",
     "jest": "^27.5.1",
     "pg-promise": "^10.11.1",
+    "sonar-scanner": "^3.1.0",
     "typescript": "^4.5.5"
   }
 }
