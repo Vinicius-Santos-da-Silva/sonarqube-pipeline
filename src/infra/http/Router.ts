@@ -1,5 +1,4 @@
 import RepositoryFactory from "../../domain/factory/RepositoryFactory";
-import OrdersController from "../controller/OrdersController";
 import Http from "./Http";
 
 export default class Router {
@@ -8,10 +7,8 @@ export default class Router {
 	}
 
 	init () {
-		this.http.route("get", "/orders", async (params: any, body: any) => {
-			const ordersController = new OrdersController(this.repositoryFactory);
-			const output = ordersController.getOrders();
-			return output;
+		this.http.route("get", "/", async (params: any, body: any) => {
+			return {message: "Ok"};
 		});
 	}
 }
