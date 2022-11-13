@@ -20,6 +20,7 @@ export default class HapiHttp implements Http {
 	
 	async listen(port: number): Promise<void> {
 		this.server.settings.port = port;
+		console.log("Running on port " + port)
 		await this.server.start();
 	}
 }
