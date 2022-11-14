@@ -8,11 +8,17 @@
   },
   "scripts": {
     "test": "tsc && jest ./dist --runInBand --coverage",
-    "main": "tsc && node ./dist/src/main"
+    "main": "tsc && node ./dist/src/main",
+    "tslint": "tslint -t json -o tslint-report.json --project . --force"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "jest-sonar-reporter": "^2.0.0",
+    "ts-jest": "^27.0.0",
+    "tslint": "^6.0.0"
+  },
   "dependencies": {
     "@hapi/hapi": "^20.2.1",
     "@types/express": "^4.17.13",
