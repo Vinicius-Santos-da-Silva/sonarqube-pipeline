@@ -4,11 +4,7 @@
   "description": "",
   "main": "index.js",
   "jest": {
-    "collectCoverage": true,
-    "coverageReporters": [
-      "json",
-      "html"
-    ]
+    "collectCoverage": true
   },
   "scripts": {
     "test": "tsc && jest ./dist --runInBand --coverage",
