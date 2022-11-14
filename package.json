@@ -7,9 +7,10 @@
     "collectCoverage": true
   },
   "scripts": {
-    "test": "tsc && jest ./dist --runInBand --coverage",
     "main": "tsc && node ./dist/src/main",
-    "tslint": "tslint -t json -o tslint-report.json --project . --force"
+    "tslint": "tslint -t json -o tslint-report.json --project . --force",
+    "build": "tsc -p .",
+    "test": "jest --coverage"
   },
   "keywords": [],
   "author": "",
