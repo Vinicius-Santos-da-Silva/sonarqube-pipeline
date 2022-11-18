@@ -22,7 +22,8 @@ jobs:
       - name: Execute SonarScan
         env: 
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: npm run sonar-scanner
+          PR_NUMBER: ${{ github.event.number }}
+        run: sonar-scanner  -Dsonar.pullrequest.key=${{ github.event.number }}
       # - name: SonarCloud Scan
       #   uses: SonarSource/sonarcloud-github-action@master
       #   env:
