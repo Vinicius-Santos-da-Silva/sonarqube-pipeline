@@ -10,7 +10,8 @@
     "main": "tsc && node ./dist/src/main",
     "tslint": "tslint -t json -o tslint-report.json --project . --force",
     "build": "tsc -p .",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner"
   },
   "keywords": [],
   "author": "",
