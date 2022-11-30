@@ -8,8 +8,8 @@ on:
       - development
     # types: [opened, synchronize, reopened]
 jobs:
-  sonarcloud:
-    name: SonarCloud
+  qa:
+    name: QA
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
