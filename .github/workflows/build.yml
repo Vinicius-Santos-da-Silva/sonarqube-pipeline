@@ -8,8 +8,8 @@ on:
       - development
     # types: [opened, synchronize, reopened]
 jobs:
-  sonarcloud:
-    name: SonarCloud
+  qa:
+    name: QA
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -17,8 +17,13 @@ jobs:
           fetch-depth: 0 
       - name: Install dependencies
         run: npm install
-      - name: Test and coverage2
+      - name: Test and coverage
         run: npm run test
+      # - name: Execute SonarScan
+      #   env: 
+      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      #     PR_NUMBER: ${{ github.event.number }}
+      #   run:  npm run sonar-scanner -- -Dsonar.pullrequest.key=${{ github.event.number }}
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
